@@ -1,0 +1,224 @@
+.menuWrapper {
+    width: 100%;
+    text-align: center;
+    display: grid;
+}
+
+.menuHeader {
+    font-family: 'Indie Flower', 'cursive';
+    font-size: 5rem;
+}
+
+.ticketHeader {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 70%;
+    height: 9rem;
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 15%;
+    font-size: 2.5rem;
+    font-family: 'Indie Flower', 'cursive';
+    border: 2px dashed black;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+
+.ticketHeader_p1 {
+    width: 20%;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+.ticketHeader_p2 {
+    width: 20%;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.ticketHeader_dcontainer {
+    width: 20%;
+    display: flex;
+    text-align: center;
+    position: relative;
+    background-color: black;
+    color: white;
+}
+
+.ticketHeader_dcontainer_p1 {
+    position: absolute;
+    bottom: 1px;
+    background-color: black;
+    color: white;
+    width: 50%;
+}
+
+.ticketHeader_dcontainer_p2 {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    background-color: white;
+    color: black;
+    width: 50%;
+}
+
+.ticketHeader_acontainer {
+    width: 20%;
+    border: 1px solid black;
+    display: flex;
+    text-align: center;
+    position: relative;
+    background-color: black;
+    color: white;
+}
+
+.ticketHeader_acontainer_p1 {
+    position: absolute;
+    bottom: 1px;
+    background-color: white;
+    color: black;
+    width: 50%;
+}
+
+.ticketHeader_acontainer_p2 {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    background-color: black;
+    color: white;
+    width: 50%;
+}
+
+
+.flightCard {
+        height: 9.4rem;
+        width: 70%;
+        margin-top: 5rem;
+        margin-left: 15%;
+        color: black;
+        font-size: 2.5rem;
+        font-weight: bold;
+        line-height: 1.3em;
+        border: 2px dashed black;
+        border-radius: 10px;
+        text-shadow: -1px -1px black;
+        font-weight: normal;     
+}
+
+
+.flightCard:hover {
+    background-color: black;
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+}
+
+  .flightCard:active {
+    transform: translateY(-1px);
+    background-color: black;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  }
+
+
+.orderPage {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+
+  .orderPage_content {
+    font-family: "Indie Flower", "cursive";
+    font-size: 3rem;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px dashed black;
+    width: 80%;
+  }
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .Invalid {
+    border: 1px solid red;
+    background-color: salmon;
+}
+
+
+.InputElement:focus {
+    outline: none;
+    background-color: #ccc;
+
+}
+
+.orderTicket {
+    background-color: white;
+    border: 1px dashed black;
+    font-family: "Indie Flower", "cursive";
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.orderTicket:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+}
+
+  .orderTicket:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  }
+
+.input {
+    margin-right: 100px;
+}
+
+@media only screen and (max-width: 900px) {
+    .ticketHeader {
+        font-size: 2rem;
+    }
+    .flightCard {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .ticketHeader {
+        font-size: 1.5rem;
+    }
+    .flightCard {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .ticketHeader {
+        font-size: 1rem;
+    }
+    .flightCard {
+        font-size: 1.5rem;
+    }
+}

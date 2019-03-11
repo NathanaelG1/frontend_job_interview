@@ -28,9 +28,24 @@ To set up the development environment:
 from wsgiref.simple_server import make_server
 from pyramid.config import Configurator
 from pyramid.response import Response
+from pyramid.events import NewRequest
 import json
 import random
 import string
+
+
+#Enable CORS for development
+def add_cors_headers_response_callback(event):
+    def cors_headers(request, response):
+        response.headers.update({
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST,GET,DELETE,PUT,OPTIONS',
+        'Access-Control-Allow-Headers': 'Origin, Content-Type, Accept, Authorization',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Max-Age': '1728000',
+        })
+    event.request.add_response_callback(cors_headers)
+
 
 def get_confirmation_number():
     return ''.join(random.choices(string.ascii_uppercase + string.digits, k=5))
@@ -61,6 +76,16 @@ def book(request):
                     "field": "last_name",
                     "error": "is_required",
                 })
+            if 'flight_number' not in request.json:
+                errors.append({
+                 "field": "flight_number",
+                 "error": "is_required",
+              })
+            if 'bags' not in request.json:
+                errors.append({
+                 "field": "bags",
+                 "error": "is_required",
+              })
         except:
             errors.append({
                 "field": "all",
@@ -81,6 +106,7 @@ def book(request):
 
 if __name__ == '__main__':
     with Configurator() as config:
+        config.add_subscriber(add_cors_headers_response_callback, NewRequest)         
         config.add_route('flights', '/flights')
         config.add_view(
             flights, route_name='flights', renderer='json'

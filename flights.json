@@ -51,6 +51,32 @@
                 "when": "2015-01-01T14:40:00"
             },
             "number": "MO77"
+        },
+        {
+            "airline": "Mobius Airways",
+            "cost": 237.78,
+            "departs": {
+                "airport": "ATL",
+                "when": "2015-01-01T01:35:00"
+            },
+            "arrives": {
+                "airport": "IAH",
+                "when": "2015-01-01T18:40:00"
+            },
+            "number": "MO502"
+        },
+        {
+            "airline": "Mobius Airways",
+            "cost": 899.99,
+            "departs": {
+                "airport": "SFO",
+                "when": "2015-01-01T09:35:00"
+            },
+            "arrives": {
+                "airport": "LGA",
+                "when": "2015-01-01T18:30:00"
+            },
+            "number": "MO177"
         }
     ]
 }
