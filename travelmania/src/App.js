@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Aux from './hoc/auxs/Aux';
+import Aux from 'react-aux';
 import Header from './components/Header/Header';
 import Booking from './components/Booking/Booking';
 import Footer from './components/Footer/Footer';
